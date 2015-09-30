@@ -1,0 +1,68 @@
+sudo apt-add-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-install oracle-java8-installer
+Apres tu teste si java est bien installé
+
+-- javac -version
+-- java  -version
+
+Javac
+
+
+-----------------------------------ECLIPSE---------------------------------
+donner les permissions au repertoire de programme
+sudo chmod 777 -R /opt
+
+1 - Télécharger la Tar.gz
+2 - dézipper le
+3 - Ouvrir le Terminal et tappez la cmd << gksu nautilus >>
+Porter le dossier <<eclipse>> et copier le dans le repertoires
+
+-- deplacer le tar.gz dans le dossier opt des programmes
+sudo mv Documents/eclipse-jee-mars-R-linux-gtk-x86_64.tar.gz /opt/
+
+-------------------------------------  gksudo nautilus
+-- aller dans la /opt
+cd /opt/
+
+-- decompresser le tar.gz qui va creer un dossier eclipse
+sudo tar -xvf eclipse-jee-mars-R-linux-gtk-x86_64.tar.gz
+
+-- creer le fichier eclipse.desktop dans le repertoire
+/usr/share/applications/ 
+gksudo gedit /usr/share/applications/eclipse.desktop
+
+--------------------------------------------------------
+[Desktop Entry]
+Name=Eclipse 4
+Type=Application
+Exec=/opt/eclipse/eclipse
+Terminal=false
+Icon=/opt/eclipse/icon.xpm
+Comment=Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE;
+Name[en]=Eclipse
+--------------------------------------------------------
+
+
+-- Now installer le raccourcie avec la commande
+sudo desktop-file-install /usr/share/applications/eclipse.desktop
+
+-- 
+sudo ln -s /opt/eclipse/eclipse /usr/local/bin/
+
+-- pour configurer le clavier en azerty	
+sudo dpkg-reconfigure keyboard-configuration
+
+Selectionnez “Generic 105-key (Intl) PC“, puis “French” deux fois. 
+La requête suivante concerne la touche spéciale AltGr : 
+sélectionnez “The default for the keyboard layout” puis “no compose key“. 
+Votre clavier est maintenant en AZERTY et le restera même après un redémarrage.
+
+
+
+----------------------------------------GIT INSTALL -------------------------------------------------------------
+sudo apt-get update
+sudo apt-get install git
+git --version --[git version 1.9.1]
