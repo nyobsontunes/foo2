@@ -1,4 +1,4 @@
-AJOUT
+﻿AJOUT
 
 2.2 Git Basics - Recording Changes to the Repository
 Recording Changes to the Repository
@@ -105,7 +105,7 @@ Changes to be committed:
     new file:   README
     modified:   CONTRIBUTING.md
 
-Short Status
+Short Status ---
 
 While the git status output is pretty comprehensive, it’s also quite wordy. Git also has a short status flag so you can see your changes in a more compact way. If you run git status -s or git status --short you get a far more simplified output from the command:
 
