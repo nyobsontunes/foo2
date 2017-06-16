@@ -82,7 +82,7 @@ Cette commande ne fonctionne que si vous avez cloné depuis un serveur sur leque
 Inspecter un dépôt distant
 
 Si vous souhaitez visualiser plus d'informations à propos d'un dépôt distant particulier, vous pouvez utiliser la commande git remote show [nom-distant]. Si vous lancez cette commande avec un nom court particulier, tel que origin, vous obtenez quelque chose comme :
-
+--
 $ git remote show origin
 * remote origin
   URL: git://github.com/schacon/ticgit.git
