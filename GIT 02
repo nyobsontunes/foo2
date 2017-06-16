@@ -1,4 +1,4 @@
-AJOUT
+﻿AJOUT
 
 2.5 Les bases de Git - Travailler avec des dépôts distants
 Travailler avec des dépôts distants
@@ -22,7 +22,7 @@ $ git remote
 origin
 
 Vous pouvez aussi spécifier -v, qui vous montre l'URL que Git a stockée pour chaque nom court :
-
+.
 $ git remote -v
 origin  git://github.com/schacon/ticgit.git (fetch)
 origin  git://github.com/schacon/ticgit.git (push)
