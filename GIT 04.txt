@@ -1,0 +1,167 @@
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects
+$ cd foo2/
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git branch
+* master
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    GIT 01~
+        deleted:    GIT 02~
+        deleted:    GIT 03~
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   GIT 01
+        deleted:    GIT 01~
+        deleted:    GIT 02~
+        deleted:    GIT 03~
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git commit -m "first update after the clone"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+        modified:   GIT 01
+        deleted:    GIT 01~
+        deleted:    GIT 02~
+        deleted:    GIT 03~
+
+no changes added to commit
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git add .
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git commit -m "first update after the clone"
+[master ece0bd4] first update after the clone
+ 4 files changed, 2 insertions(+), 530 deletions(-)
+ delete mode 100644 GIT 01~
+ delete mode 100644 GIT 02~
+ delete mode 100644 GIT 03~
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git remote
+origin
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git remote -v
+origin  https://github.com/nyobsontunes/foo2.git (fetch)
+origin  https://github.com/nyobsontunes/foo2.git (push)
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git add .
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git commit -m "second update after the clone"
+[master d009367] second update after the clone
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git push origin master
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 720 bytes | 0 bytes/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/nyobsontunes/foo2.git
+   3134d40..d009367  master -> master
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/nyobsontunes/foo2.git
+  Push  URL: https://github.com/nyobsontunes/foo2.git
+  HEAD branch: master
+  Remote branches:
+    master        tracked
+    readmeChanges tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git diff
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git branch
+* master
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git remote add branch02  https://github.com/nyobsontunes/foo2.git
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git branch
+* master
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/nyobsontunes/foo2.git
+  Push  URL: https://github.com/nyobsontunes/foo2.git
+  HEAD branch: master
+  Remote branches:
+    master        tracked
+    readmeChanges tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git remote -v
+branch02        https://github.com/nyobsontunes/foo2.git (fetch)
+branch02        https://github.com/nyobsontunes/foo2.git (push)
+origin  https://github.com/nyobsontunes/foo2.git (fetch)
+origin  https://github.com/nyobsontunes/foo2.git (push)
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git fetch branch02
+From https://github.com/nyobsontunes/foo2
+ * [new branch]      master        -> branch02/master
+ * [new branch]      readmeChanges -> branch02/readmeChanges
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git branch
+* master
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$ git remote
+branch02
+origin
+
+MichaelNYOBE@NYOBE-PC MINGW64 /d/Documents/NetBeansProjects/foo2 (master)
+$
